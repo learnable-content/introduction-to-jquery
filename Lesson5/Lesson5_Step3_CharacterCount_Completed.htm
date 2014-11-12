@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Character Count</title>
+	<link rel="stylesheet" href="css/characterCount.css">
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>
+	$(function(){
+		// jQuery Code goes here
+		
+		$('.textbox').on({
+			keydown:function(){
+				var countDown = 150 - $(this).val().length;
+				$('.countDisplay').html(countDown + '/150 Remaining');
+				if(countDown < 0){
+					$(this).addClass('redWarning')		
+				} else {
+					$(this).removeClass('redWarning');
+				}
+			},
+			keyup:function(evt){
+				if(evt.keyCode === 13){
+					$('.submitted').fadeIn(300);
+				}
+			}
+		});
+	})
+	</script>
+</head>
+<body>
+	<div class="countbox">
+		<div class="submitted"><h2>Thank You !!</h2></div>
+		<textarea type="text" class="textbox"></textarea>
+		<h5 class="countDisplay">150/150 Remaining</h5>
+	</div>
+</body>
+</html>
