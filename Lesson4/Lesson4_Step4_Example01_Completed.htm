@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dropdown Menu</title>
+	<link rel="stylesheet" href="css/dropdownmenu.css">
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>
+	$(function(){
+		// All jQuery code goes here
+		
+		$('.dropdownMenu > li').hover( function(){
+			// Mouseover
+
+			$(this).children("ul").slideDown(200);
+
+		}, function(){
+			// Mouseout
+
+			$(this).children("ul").slideUp(200);
+		});
+
+		
+	})
+	</script>
+</head>
+<body>
+<ul class="dropdownMenu">
+		<li>Apples
+			<ul>
+				<li>Jam</li>
+				<li>Pie</li>
+				<li>Cider</li>
+			</ul>
+		</li>
+		<li>Oranges
+			<ul>
+				<li>Squash</li>
+				<li>Chocolate</li>
+			</ul>
+		</li>
+		<li>Peaches
+			<ul>
+				<li>Jam</li>
+				<li>Juice Concentrate</li>
+			</ul>
+		</li>
+		<li>Strawberries
+			<ul>
+				<li>Jam</li>
+				<li>Crush</li>
+				<li>Cake</li>
+			</ul>
+		</li>
+		<li>Kiwi
+			<ul>
+				<li>Crush</li>
+			</ul>
+		</li>
+</ul>
+
+</body>
+</html>
